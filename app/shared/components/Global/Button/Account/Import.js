@@ -5,10 +5,10 @@ import { Button } from 'semantic-ui-react';
 
 import GlobalModalAccountImport from '../../Modal/Account/Import';
 
-class GlobalButtonAccountImport extends Component<Props> {
+export class GlobalButtonAccountImport extends Component<Props> {
   state = {
     open: false
-  }
+  };
 
   onOpen = () => this.setState({ open: true });
   onClose = () => this.setState({ open: false });
