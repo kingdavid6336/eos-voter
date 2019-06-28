@@ -28,7 +28,7 @@ const logos = {
   '73647cde120091e0a4b85bced2f3cfdb3041e266cbbe95cee59b73235a1b3b6f': worbliLogo, // mainnet (worbli)
 };
 
-class GlobalFragmentChainLogo extends PureComponent<Props> {
+export class GlobalFragmentChainLogo extends PureComponent<Props> {
   render() {
     const {
       avatar,
