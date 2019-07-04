@@ -8,7 +8,7 @@ import GlobalModalAccountImportHot from '../../../../containers/Global/Account/I
 import GlobalModalAccountImportLedger from '../../../../containers/Global/Account/Import/Ledger';
 import GlobalModalAccountImportWatch from '../../../../containers/Global/Account/Import/Watch';
 
-class GlobalModalAccountImport extends Component<Props> {
+export class GlobalModalAccountImport extends Component<Props> {
   getPanes = () => {
     const {
       onClose,
@@ -45,7 +45,7 @@ class GlobalModalAccountImport extends Component<Props> {
     }
 
     return panes;
-  }
+  };
 
   render() {
     const {
