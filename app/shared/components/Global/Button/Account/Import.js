@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 import { translate } from 'react-i18next';
 import { Button } from 'semantic-ui-react';
 
-import GlobalModalAccountImport from '../../Modal/Account/Import';
+import ModalAccountImport from '../../Modal/Account/Import';
 
-class GlobalButtonAccountImport extends Component<Props> {
+export class GlobalButtonAccountImport extends Component<Props> {
   state = {
     open: false
-  }
+  };
 
   onOpen = () => this.setState({ open: true });
   onClose = () => this.setState({ open: false });
@@ -22,7 +22,7 @@ class GlobalButtonAccountImport extends Component<Props> {
       open
     } = this.state;
     return (
-      <GlobalModalAccountImport
+      <ModalAccountImport
         onClose={this.onClose}
         open={open}
         settings={settings}

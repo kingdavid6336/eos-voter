@@ -4,13 +4,12 @@ import { Header } from 'semantic-ui-react';
 import { translate } from 'react-i18next';
 import Blockies from 'react-blockies';
 
-class GlobalFragmentWallet extends PureComponent<Props> {
+export class GlobalFragmentWallet extends PureComponent<Props> {
   render() {
     const {
       account,
       authorization,
       mode,
-      pubkey,
     } = this.props;
     return (
       <Header
@@ -24,10 +23,14 @@ class GlobalFragmentWallet extends PureComponent<Props> {
           seed={`${account}@${authorization}`}
         />
         <Header.Content style={{ minWidth: '10em' }}>
-          {account}
-          <Header.Subheader>
-            {authorization} / {mode}
-          </Header.Subheader>
+          <React.Fragment>
+            {account}
+            <Header.Subheader>
+              <React.Fragment>
+                {authorization} / {mode}
+              </React.Fragment>
+            </Header.Subheader>
+          </React.Fragment>
         </Header.Content>
       </Header>
     );
